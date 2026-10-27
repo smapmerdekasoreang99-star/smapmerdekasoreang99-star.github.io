@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aplikasi Staf — SMA Plus Merdeka Soreang</title>
+<!-- Halaman staf sengaja TIDAK ditautkan dari index.html dan tidak diindeks mesin pencari:
+     aplikasi administrasi (terutama Induk Pembiayaan) jangan mudah ditemukan siswa. Bagikan alamatnya hanya ke staf. -->
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#1D2A3A">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/ikon-32.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="manifest" href="manifest-staf.webmanifest">
+<link rel="stylesheet" href="assets/dasar.css?v=1">
+<link rel="stylesheet" href="assets/beranda.css?v=1">
+</head>
+<body>
+<header class="kepala">
+  <div class="kepala-isi">
+    <div class="merek"><img src="assets/logo.png" alt="Logo SMA Plus Merdeka Soreang"><div><b>SMA Plus Merdeka</b><span>Soreang</span></div></div>
+    <h1>Aplikasi Staf</h1>
+    <p>Untuk operator, kurikulum, kesiswaan, tata usaha, dan pimpinan. Jangan bagikan alamat halaman ini ke siswa.</p>
+  </div>
+</header>
+<main class="isi" style="padding-top:var(--j5)">
+  <section class="kelompok" aria-labelledby="j-adm">
+    <h2 id="j-adm">Administrasi sekolah</h2>
+    <p>Masuk dengan akun atau PIN masing-masing aplikasi.</p>
+    <ul class="ubin">
+      <li><a href="/data_induk/"><img src="/data_induk/assets/ikon-192.png" alt=""><span><b>Data Induk Sekolah</b><small>Data siswa, guru, kelas, mapel, dan jadwal KBM sekolah.</small><span class="peran">Operator</span></span></a></li>
+      <li><a href="/kehadiran_guru/"><img src="/kehadiran_guru/assets/ikon-192.png" alt=""><span><b>Kehadiran Guru</b><small>Ketidakhadiran guru, guru pengganti, piket, dan rekap kehadiran.</small><span class="peran">Kurikulum &amp; piket</span></span></a></li>
+      <li><a href="/induk_pembiayaan/"><img src="/induk_pembiayaan/assets/ikon-192.png" alt=""><span><b>Induk Pembiayaan</b><small>Dasar pembiayaan dari kehadiran dan piket, rekap, dan daftar pembayaran.</small><span class="peran">Tata usaha &amp; pimpinan</span></span></a></li>
+    </ul>
+  </section>
+
+  <section class="kelompok" aria-labelledby="j-kel">
+    <h2 id="j-kel">Pengelola aplikasi</h2>
+    <p>Bagian pengelola di dalam aplikasi guru.</p>
+    <ul class="ubin">
+      <li><a href="/Tryout_Guru/admin.html?menu=admin"><img src="/Tryout_Guru/assets/ikon-192.png" alt=""><span><b>Admin Asesmen Merdeka</b><small>Data siswa, PIN pribadi guru, impor kode hasil, dan cadangan.</small><span class="peran">Operator</span></span></a></li>
+      <li><a href="/absen_ekskul/kesiswaan.html"><img src="/absen_ekskul/assets/ikon-192.png" alt=""><span><b>Admin Kesiswaan Ekskul</b><small>Data pembina, kegiatan ekstrakurikuler, dan periode nilai.</small><span class="peran">Kesiswaan</span></span></a></li>
+    </ul>
+  </section>
+
+  <footer class="kaki">Aplikasi untuk siswa dan guru ada di <a href="./">halaman utama</a>.</footer>
+</main>
+</body>
+</html>

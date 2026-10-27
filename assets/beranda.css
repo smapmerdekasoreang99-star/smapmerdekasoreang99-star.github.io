@@ -1,0 +1,44 @@
+/* Beranda — halaman pembuka semua aplikasi SMA Plus Merdeka Soreang.
+   Token warna, jarak, dan huruf dari assets/dasar.css (salinan yang sama dengan aplikasi lain). */
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--kertas);color:var(--tinta);
+  font-family:"Public Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;font-size:var(--h-b);line-height:1.5}
+.kepala{background:var(--gelap);color:var(--tinta-terang);padding:var(--j5) 0 var(--j6)}
+.kepala-isi,.isi{max-width:992px;margin:0 auto;padding-left:var(--j4);padding-right:var(--j4)}
+.merek{display:flex;align-items:center;gap:var(--j3)}
+.merek img{width:44px;height:auto;flex:none}
+.merek b{display:block;font-family:"Fraunces",Georgia,serif;font-size:var(--h-judul-s);line-height:1.2}
+.merek span{display:block;color:var(--tinta-terang-2);font-size:var(--h-s)}
+h1{font-family:"Fraunces",Georgia,serif;font-weight:700;font-size:var(--h-judul-b);line-height:1.2;margin:var(--j5) 0 var(--j1);text-wrap:balance}
+.kepala p{margin:0;color:var(--tinta-terang-2);font-size:var(--h-m)}
+.isi{padding-bottom:var(--j6)}
+
+/* Pilihan kelompok pemakai */
+.pilih{display:flex;gap:var(--j1);margin:calc(-1 * var(--j5)) 0 var(--j5);padding:var(--j1);
+  background:var(--kertas-2);border:1px solid var(--garis);border-radius:var(--r-bulat);box-shadow:var(--bayang-2);width:fit-content;max-width:100%}
+.pilih a{flex:1;min-height:var(--sentuh);display:flex;align-items:center;justify-content:center;padding:0 var(--j4);
+  border-radius:var(--r-bulat);color:var(--tinta-2);font-weight:600;font-size:var(--h-m);text-decoration:none;white-space:nowrap}
+.pilih a[aria-current="true"]{background:var(--gelap);color:var(--tinta-terang)}
+.pilih a:not([aria-current="true"]):hover{background:var(--kertas-3);color:var(--tinta)}
+
+h2{font-family:"Fraunces",Georgia,serif;font-size:var(--h-judul-s);color:var(--gelap);margin:0 0 var(--j1)}
+.kelompok>p{margin:0 0 var(--j4);color:var(--tinta-2);font-size:var(--h-m)}
+.kelompok+.kelompok{margin-top:var(--j6)}
+.js .kelompok[hidden]{display:none}
+
+/* Ubin aplikasi */
+.ubin{list-style:none;margin:0;padding:0;display:grid;gap:var(--j3);grid-template-columns:repeat(auto-fill,minmax(270px,1fr))}
+.ubin a{display:flex;align-items:center;gap:var(--j4);height:100%;padding:var(--j4);
+  background:var(--kertas-2);border:1px solid var(--garis);border-radius:var(--r3);box-shadow:var(--bayang-1);
+  color:inherit;text-decoration:none;transition:box-shadow .15s,border-color .15s,transform .05s}
+.ubin a:hover{border-color:var(--garis-2);box-shadow:var(--bayang-2)}
+.ubin a:active{transform:translateY(1px)}
+.ubin img{width:60px;height:60px;flex:none;border-radius:14px}
+.ubin b{display:block;font-size:var(--h-n);color:var(--tinta)}
+.ubin small{display:block;margin-top:2px;color:var(--tinta-2);font-size:var(--h-s);line-height:1.4}
+.ubin .peran{display:inline-block;margin-top:var(--j2);padding:1px var(--j2);border-radius:var(--r-bulat);
+  background:var(--emas-kabut);color:var(--emas-teks);font-size:var(--h-xs);font-weight:600}
+
+.kaki{margin-top:var(--j7);padding-top:var(--j4);border-top:1px solid var(--garis);color:var(--tinta-3);font-size:var(--h-s)}
+.kaki a{color:var(--emas-teks)}
+@media (max-width:420px){ h1{font-size:var(--h-judul)} .ubin img{width:52px;height:52px;border-radius:12px} }

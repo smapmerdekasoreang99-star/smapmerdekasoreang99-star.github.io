@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aplikasi Sekolah — SMA Plus Merdeka Soreang</title>
+<meta name="description" content="Semua aplikasi SMA Plus Merdeka Soreang dalam satu halaman: latihan, asesmen, dan administrasi sekolah.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="SMA Plus Merdeka Soreang">
+<meta property="og:locale" content="id_ID">
+<meta property="og:title" content="Aplikasi Sekolah — SMA Plus Merdeka Soreang">
+<meta property="og:description" content="Semua aplikasi sekolah dalam satu halaman.">
+<meta property="og:image" content="https://smapmerdekasoreang99-star.github.io/matematika_dasar/assets/pratinjau.jpg?v=3">
+<meta name="theme-color" content="#1D2A3A">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/ikon-32.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="assets/dasar.css?v=1">
+<link rel="stylesheet" href="assets/beranda.css?v=1">
+<script>document.documentElement.classList.add("js")</script>
+</head>
+<body>
+<header class="kepala">
+  <div class="kepala-isi">
+    <div class="merek"><img src="assets/logo.png" alt="Logo SMA Plus Merdeka Soreang"><div><b>SMA Plus Merdeka</b><span>Soreang</span></div></div>
+    <h1>Aplikasi Sekolah</h1>
+    <p>Pilih aplikasi yang ingin dibuka. Simpan halaman ini di layar HP agar cukup mengingat satu alamat.</p>
+  </div>
+</header>
+<main class="isi">
+  <nav class="pilih" aria-label="Kelompok pemakai">
+    <a href="#siswa" data-ke="siswa">Siswa</a>
+    <a href="#guru" data-ke="guru">Guru &amp; pembina</a>
+  </nav>
+
+  <section class="kelompok" id="siswa" aria-labelledby="j-siswa">
+    <h2 id="j-siswa">Untuk siswa</h2>
+    <p>Masuk dengan NISN. Kode akses ujian diberikan guru di kelas.</p>
+    <ul class="ubin">
+      <li><a href="/Tryout_Guru/"><img src="/Tryout_Guru/assets/ikon-192.png" alt=""><span><b>Asesmen Merdeka</b><small>Ujian daring: masuk dengan NISN dan kode akses, kerjakan soal, hasil langsung tersimpan.</small></span></a></li>
+      <li><a href="/matematika_dasar/"><img src="/matematika_dasar/assets/ikon-192.png" alt=""><span><b>Matematika Dasar</b><small>Latihan hitung bertahap: selesaikan 10 soal dengan benar untuk naik level.</small></span></a></li>
+      <li><a href="/english_reading/"><img src="/english_reading/assets/ikon-192.png" alt=""><span><b>English Reading</b><small>Latihan membaca bahasa Inggris: dengarkan paragraf, baca sendiri, lihat koreksi per kata.</small></span></a></li>
+    </ul>
+  </section>
+
+  <section class="kelompok" id="guru" aria-labelledby="j-guru">
+    <h2 id="j-guru">Untuk guru dan pembina</h2>
+    <p>Masuk dengan PIN pribadi masing-masing.</p>
+    <ul class="ubin">
+      <li><a href="/Tryout_Guru/?guru"><img src="/Tryout_Guru/assets/ikon-192.png" alt=""><span><b>Asesmen Merdeka</b><small>Buka sesi ujian, pantau siswa, dan lihat hasil serta analisis soal.</small><span class="peran">Guru &amp; pengawas</span></span></a></li>
+      <li><a href="/Tryout_Guru/admin.html?menu=pustaka"><img src="/Tryout_Guru/assets/ikon-192.png" alt=""><span><b>Pustaka Paket Asesmen</b><small>Bank soal: unggah soal dengan atau tanpa kisi-kisi, dan kelola paket buatan sendiri.</small><span class="peran">Guru</span></span></a></li>
+      <li><a href="/matematika_dasar/guru.html"><img src="/matematika_dasar/assets/ikon-192.png" alt=""><span><b>Matematika Dasar</b><small>Sesi kegiatan per kelompok, kemajuan level siswa, dan rekap.</small><span class="peran">Guru</span></span></a></li>
+      <li><a href="/english_reading/guru.html"><img src="/english_reading/assets/ikon-192.png" alt=""><span><b>English Reading</b><small>Sesi kegiatan per kelompok dan kemajuan membaca siswa.</small><span class="peran">Guru</span></span></a></li>
+      <li><a href="/absen_ekskul/"><img src="/absen_ekskul/assets/ikon-192.png" alt=""><span><b>Absensi Ekstrakurikuler</b><small>Laporan kegiatan, kehadiran peserta, rekap, dan nilai ekstrakurikuler.</small><span class="peran">Pembina</span></span></a></li>
+    </ul>
+  </section>
+
+  <footer class="kaki">SMA Plus Merdeka Soreang</footer>
+</main>
+<script>
+/* Kelompok terakhir yang dipilih diingat di perangkat ini; #siswa / #guru di alamat bisa dibagikan. */
+(function(){
+  var KUNCI="beranda_kelompok",kel=["siswa","guru"];
+  function pilih(k,simpan){
+    if(kel.indexOf(k)<0)k="siswa";
+    kel.forEach(function(x){document.getElementById(x).hidden=x!==k});
+    document.querySelectorAll(".pilih a").forEach(function(a){a.setAttribute("aria-current",a.dataset.ke===k?"true":"false")});
+    if(simpan)try{localStorage.setItem(KUNCI,k)}catch(e){}
+  }
+  var awal=location.hash.slice(1);
+  if(kel.indexOf(awal)<0)try{awal=localStorage.getItem(KUNCI)}catch(e){awal=null}
+  pilih(awal,false);
+  /* #guru di alamat tidak boleh membuat halaman melompat melewati judul */
+  if(location.hash)window.addEventListener("load",function(){window.scrollTo(0,0)});
+  document.querySelectorAll(".pilih a").forEach(function(a){a.addEventListener("click",function(e){
+    e.preventDefault();history.replaceState(null,"","#"+a.dataset.ke);pilih(a.dataset.ke,true)})});
+  window.addEventListener("hashchange",function(){pilih(location.hash.slice(1),true)});
+})();
+</script>
+</body>
+</html>
