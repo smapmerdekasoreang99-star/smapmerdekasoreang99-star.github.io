@@ -1,0 +1,25 @@
+BERANDA APLIKASI SEKOLAH - versi laptop
+=======================================
+
+Isinya: satu halaman berisi ikon semua aplikasi SMA Plus Merdeka Soreang.
+Halamannya tersimpan di laptop, tetapi membuka aplikasinya tetap perlu internet.
+
+CARA MEMASANG
+1. Salin folder ini (atau berkas zip-nya, lalu Extract All) ke laptop.
+2. Klik dua kali PASANG.cmd.
+3. Ketik 1 untuk laptop guru/kelas/lab, atau 2 untuk laptop staf.
+4. Ikon "Aplikasi Sekolah" muncul di Desktop dan di menu Start.
+
+Bila Windows menampilkan "Windows protected your PC":
+klik "More info" lalu "Run anyway". Pemasang tidak perlu hak admin
+dan hanya menulis ke folder pengguna (%LOCALAPPDATA%\BerandaSekolah).
+
+MEMPERBARUI
+Jalankan PASANG.cmd versi terbaru. Berkas lama ditimpa.
+
+MENGHAPUS
+Klik dua kali HAPUS.cmd.
+
+CATATAN
+Pilihan 2 berisi tautan aplikasi staf (Data Induk, Kehadiran Guru,
+Induk Pembiayaan, admin). Jangan pasang pilihan 2 di laptop yang dipakai siswa.
