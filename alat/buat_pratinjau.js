@@ -5,7 +5,7 @@ const ASAL = "https://smapmerdekasoreang99-star.github.io";
 const ikon = (folder) => "data:image/png;base64," + fs.readFileSync(path.join(AKAR, folder, "assets/ikon-192.png")).toString("base64");
 const logo = "data:image/png;base64," + fs.readFileSync(path.join(AKAR, "beranda/assets/logo.png")).toString("base64");
 const ikonBeranda = "data:image/png;base64," + fs.readFileSync(path.join(AKAR, "beranda/assets/ikon-192.png")).toString("base64");
-const I = { to: ikon("Tryout_Guru"), md: ikon("Matematika_Dasar"), er: ikon("English_Reading"), ae: ikon("absen_ekskul"), di: ikon("data_induk"), kg: ikon("kehadiran_guru"), ip: ikon("induk_pembiayaan") };
+const I = { to: ikon("Tryout_Guru"), md: ikon("Matematika_Dasar"), er: ikon("English_Reading"), ae: ikon("absen_ekskul"), di: ikon("data_induk"), kg: ikon("kehadiran_guru"), ip: ikon("induk_pembiayaan"), sp: ikon("sarana_prasarana") };
 const esc = (s) => s.replace(/&/g, "&amp;").replace(/</g, "&lt;");
 const ubin = (list) => `<ul class="ubin">${list.map(([ik, href, nama, ket, peran]) =>
   `<li><a href="${ASAL}${href}" target="_blank" rel="noopener"><img src="${I[ik]}" alt="" width="60" height="60"><span><b>${esc(nama)}</b><small>${esc(ket)}</small>${peran ? `<span class="peran">${esc(peran)}</span>` : ""}</span></a></li>`).join("")}</ul>`;
@@ -18,11 +18,13 @@ const GURU = [
   ["to", "/Tryout_Guru/admin.html?menu=pustaka", "Pustaka Paket Asesmen", "Bank soal: unggah soal dengan atau tanpa kisi-kisi, dan kelola paket buatan sendiri.", "Guru"],
   ["md", "/matematika_dasar/guru.html", "Matematika Dasar", "Sesi kegiatan per kelompok, kemajuan level siswa, dan rekap.", "Guru"],
   ["er", "/english_reading/guru.html", "English Reading", "Sesi kegiatan per kelompok dan kemajuan membaca siswa.", "Guru"],
-  ["ae", "/absen_ekskul/", "Absensi Ekstrakurikuler", "Laporan kegiatan, kehadiran peserta, rekap, dan nilai ekstrakurikuler.", "Pembina"]];
+  ["ae", "/absen_ekskul/", "Absensi Ekstrakurikuler", "Laporan kegiatan, kehadiran peserta, rekap, dan nilai ekstrakurikuler.", "Pembina"],
+  ["sp", "/sarana_prasarana/", "Sarana Prasarana", "Isi sarana, alat, dan bahan tiap ruang. Penanggung jawab ruang mencatat ruangnya sendiri.", "Penanggung jawab ruang"]];
 const STAF1 = [
   ["di", "/data_induk/", "Data Induk Sekolah", "Data siswa, guru, kelas, mapel, dan jadwal KBM sekolah.", "Operator"],
   ["kg", "/kehadiran_guru/", "Kehadiran Guru", "Ketidakhadiran guru, guru pengganti, piket, dan rekap kehadiran.", "Kurikulum & piket"],
-  ["ip", "/induk_pembiayaan/", "Induk Pembiayaan", "Dasar pembiayaan dari kehadiran dan piket, rekap, dan daftar pembayaran.", "Tata usaha & pimpinan"]];
+  ["ip", "/induk_pembiayaan/", "Induk Pembiayaan", "Dasar pembiayaan dari kehadiran dan piket, rekap, dan daftar pembayaran.", "Tata usaha & pimpinan"],
+  ["sp", "/sarana_prasarana/", "Sarana Prasarana", "Inventaris sarana, alat, dan bahan per ruang, Buku Induk berkop, dan label QR.", "Staf Sarpras"]];
 const STAF2 = [
   ["to", "/Tryout_Guru/admin.html?menu=admin", "Admin Asesmen Merdeka", "Data siswa, PIN pribadi guru, impor kode hasil, dan cadangan.", "Operator"],
   ["ae", "/absen_ekskul/kesiswaan.html", "Admin Kesiswaan Ekskul", "Data pembina, kegiatan ekstrakurikuler, dan periode nilai.", "Kesiswaan"]];
