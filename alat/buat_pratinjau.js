@@ -12,7 +12,8 @@ const ubin = (list) => `<ul class="ubin">${list.map(([ik, href, nama, ket, peran
 const SISWA = [
   ["to", "/Tryout_Guru/", "Asesmen Merdeka", "Ujian daring: masuk dengan NISN dan kode akses, kerjakan soal, hasil langsung tersimpan."],
   ["md", "/matematika_dasar/", "Matematika Dasar", "Latihan hitung bertahap: selesaikan 10 soal dengan benar untuk naik level."],
-  ["er", "/english_reading/", "English Reading", "Latihan membaca bahasa Inggris: dengarkan paragraf, baca sendiri, lihat koreksi per kata."]];
+  ["er", "/english_reading/", "English Reading", "Latihan membaca bahasa Inggris: dengarkan paragraf, baca sendiri, lihat koreksi per kata."],
+  ["sp", "/sarana_prasarana/?pinjam", "Pinjam Buku", "Cari buku perpustakaan, kirim permintaan pinjam dari HP, lalu tunjukkan bukunya ke pustakawan."]];
 const GURU = [
   ["to", "/Tryout_Guru/?guru", "Asesmen Merdeka", "Buka sesi ujian, pantau siswa, dan lihat hasil serta analisis soal.", "Guru & pengawas"],
   ["to", "/Tryout_Guru/admin.html?menu=pustaka", "Pustaka Paket Asesmen", "Bank soal: unggah soal dengan atau tanpa kisi-kisi, dan kelola paket buatan sendiri.", "Guru"],
